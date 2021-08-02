@@ -1,0 +1,57 @@
+﻿@helper  ActionLink(string linkText, string actionName)
+{var isCurrent = ViewContext.RouteData.Values["action"].ToString() == actionName;
+
+@Html.ActionLink(linkText, actionName, null, new
+{
+  @class = isCurrent ? "nav-link active" : "nav-link",
+  aria_current = isCurrent ? "page" : null
+})}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CUSC Jewellery - @ViewBag.Title</title>
+  @Styles.Render("~/bundles/styles")
+  @RenderSection("styles", required: false)
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      @Html.ActionLink("CUSC Jewellery", "Index", "Home", null, new { @class = "navbar-brand h1 mb-0" })
+      <button class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-lg-1">
+          <li class="nav-item">
+            @ActionLink("Home", "Home")
+          </li>
+          <li class="nav-item">
+            @ActionLink("About", "About")
+          </li>
+          <li class="nav-item">
+            @ActionLink("Contact", "Contact")
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+      <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+  </div>
+
+  @Scripts.Render("~/bundles/scripts")
+  @RenderSection("scripts", required: false)
+</body>
+</html>
