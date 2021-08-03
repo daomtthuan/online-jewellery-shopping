@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Online Jewellery Shopping", "OnlineJewelleryShopping\Online Jewellery Shopping.csproj", "{12F3A163-1CBC-49D7-A813-1DA087A16FE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineJewelleryShopping", "OnlineJewelleryShopping\OnlineJewelleryShopping.csproj", "{12F3A163-1CBC-49D7-A813-1DA087A16FE4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{48AF20B8-CFE0-4D58-92C2-985438F67400}"
 	ProjectSection(SolutionItems) = preProject
