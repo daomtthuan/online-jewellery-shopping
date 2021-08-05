@@ -214,7 +214,7 @@ GO
 CREATE TABLE [dbo].[UserRegMst](
 	[userID] [nchar](10) NOT NULL,
 	[userFname] [text] NOT NULL,
-	[userLname]]] [text] NOT NULL,
+	[userLname] [text] NOT NULL,
 	[address] [varchar](max) NOT NULL,
 	[city] [nvarchar](50) NOT NULL,
 	[state] [nvarchar](50) NOT NULL,
